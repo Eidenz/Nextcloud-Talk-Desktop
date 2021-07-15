@@ -1,0 +1,6 @@
+.vs/
+.vs/*
+Talk/bin/*
+Talk/obj/*
+packages/cef.redist.x64.91.1.21/CEF/libcef.dll
+packages/cef.redist.x86.91.1.21/CEF/libcef.dll

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talk", "Talk\Talk.csproj", "{25DEC2DF-CFFB-4565-A1C1-F6BD08C8681E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25DEC2DF-CFFB-4565-A1C1-F6BD08C8681E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25DEC2DF-CFFB-4565-A1C1-F6BD08C8681E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25DEC2DF-CFFB-4565-A1C1-F6BD08C8681E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25DEC2DF-CFFB-4565-A1C1-F6BD08C8681E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27E1D4ED-5672-4C13-9EB3-DDC99F0598D3}
+	EndGlobalSection
+EndGlobal
