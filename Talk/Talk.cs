@@ -114,16 +114,20 @@ namespace Talk
 
                         var response = await httpClient.SendAsync(request);
                         String responseText = await response.Content.ReadAsStringAsync();
-                        XDocument parsedResponse = XDocument.Parse(responseText);
 
-                        oldconvos = convos;
-                        convos = parsedResponse.Descendants("element");
-
-                        //reading XML and displaying result
-                        foreach (XElement item in convos)
+                        if (responseText != "Update in process.")
                         {
-                            //TODO
-                            //item.Element("displayName").Value
+                            XDocument parsedResponse = XDocument.Parse(responseText);
+
+                            oldconvos = convos;
+                            convos = parsedResponse.Descendants("element");
+
+                            //reading XML and displaying result
+                            foreach (XElement item in convos)
+                            {
+                                //TODO
+                                //item.Element("displayName").Value
+                            }
                         }
                     }
                 }
