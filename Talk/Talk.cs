@@ -252,6 +252,7 @@ namespace Talk
                 e.Cancel = true;
                 Hide();
                 this.ShowInTaskbar = false;
+                login.Load(website + "/apps/spreed/");
             }
         }
 
@@ -261,6 +262,7 @@ namespace Talk
             {
                 Hide();
                 this.ShowInTaskbar = false;
+                login.Load(website + "/apps/spreed/");
             }
         }
 
