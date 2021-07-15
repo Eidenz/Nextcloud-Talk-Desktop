@@ -9,7 +9,6 @@ So I decided to make one myself using the well-documented Talk API.
 
 |TODO|
 |----------------|
-|Add options to change sync timer, API keys, URL, etc..|
 |Add support for Maintenance mode|
 
 
