@@ -7,11 +7,6 @@ I needed a desktop app for Nextcloud Talk so I can get instant desktop notificat
 So I decided to make one myself using the well-documented Talk API.
 
 
-|TODO|
-|----------------|
-|Add support for Maintenance mode|
-
-
 # Installation
 ## From released builds
 __This app requires .NET framework 4.7.2 or later to work!__ An up-to-date Windows 10 installation should have it by default.
