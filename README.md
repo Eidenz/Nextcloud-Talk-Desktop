@@ -24,7 +24,12 @@ On the first execution, Nextcloud will generate an API key for the app, so it do
 
 
 ## Building from source
-_TO-DO_
+The app was built in C# using Visual Studio Community 2019 & .NET Framework 4.7.2.
+
+Due to github size restrictions, two DLLs from CefSharp are missing in this repo. The easiest fix would be to re-add CefSharp from NuGet once you open the project.
+Please refer to [CefSharp NuGet repo](https://www.nuget.org/packages/CefSharp.WinForms/) for installation.
+
+Other than that, you should be able to debug the source code without additional steps. Feel free to modify it for your own needs.
 
 
 ## Usage
