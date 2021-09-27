@@ -105,7 +105,7 @@ namespace Talk
                 using (var httpClient = new HttpClient())
                 {
                     //calling API
-                    using (var request = new HttpRequestMessage(new HttpMethod("GET"), website + "/ocs/v2.php/apps/spreed/api/v3/room"))
+                    using (var request = new HttpRequestMessage(new HttpMethod("GET"), website + "/ocs/v2.php/apps/spreed/api/v4/room"))
                     {
                         request.Headers.TryAddWithoutValidation("OCS-APIRequest", "true");
 
