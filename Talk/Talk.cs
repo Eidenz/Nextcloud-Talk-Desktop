@@ -105,7 +105,7 @@ namespace Talk
                 using (var httpClient = new HttpClient())
                 {
                     //calling API
-                    using (var request = new HttpRequestMessage(new HttpMethod("GET"), website + "/ocs/v2.php/apps/spreed/api/v3/room"))
+                    using (var request = new HttpRequestMessage(new HttpMethod("GET"), website + "/ocs/v2.php/apps/spreed/api/v4/room"))
                     {
                         request.Headers.TryAddWithoutValidation("OCS-APIRequest", "true");
 
@@ -144,7 +144,7 @@ namespace Talk
                     {
                         errorMessage = "Could not retreive conversations!";
                     }
-                    MessageBox.Show(errorMessage, "Nextcloud Talk");
+                    //MessageBox.Show(errorMessage, "Nextcloud Talk"); //removed for production
                 }
             }
         }
@@ -228,24 +228,24 @@ namespace Talk
 
             if (changed)
             {
-                if (who != null && message != null)
+                String balloonTitle = who;
+                String balloonText = message;
+
+                if (who == null || message == null)
                 {
-                    notifications.BalloonTipTitle = who;
-                    notifications.BalloonTipText = message;
-                }
-                else
-                {
-                    notifications.BalloonTipTitle = "Nouvelle conversation";
-                    notifications.BalloonTipText = "Une nouvelle conversation viens d'être créée.";
+                    balloonTitle = "Nouvelle conversation";
+                    balloonText = "Une nouvelle conversation viens d'être créée.";
                     if (lang != "fr-FR")
                     {
-                        notifications.BalloonTipTitle = "New conversation";
-                        notifications.BalloonTipText = "A new conversation was made.";
+                        balloonTitle = "New conversation";
+                        balloonText = "A new conversation was made.";
                     }
                 }
 
+                notifications.BalloonTipTitle = balloonTitle;
+                notifications.BalloonTipText = balloonText;
                 notifications.Icon = Properties.Resources.notif;
-                notifications.ShowBalloonTip(60000);
+                notifications.ShowBalloonTip(60000); //for old Windows versions. Lucky...
             }
         }
 

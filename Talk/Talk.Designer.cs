@@ -33,11 +33,11 @@ namespace Talk
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Talk));
             this.notifications = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.resetSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.login = new CefSharp.WinForms.ChromiumWebBrowser();
             this.checkMessages = new System.Windows.Forms.Timer(this.components);
-            this.resetSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,29 +61,6 @@ namespace Talk
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(135, 54);
             // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.quitterToolStripMenuItem.Text = "Exit";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
-            // 
-            // login
-            // 
-            this.login.ActivateBrowserOnCreation = false;
-// TODO: Échec de la génération du code de '' en raison de l'exception 'Type Primitive non valide : System.IntPtr. Utilisez CodeObjectCreateExpression à la place.'.
-            this.login.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.login.Location = new System.Drawing.Point(0, 0);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(1113, 636);
-            this.login.TabIndex = 2;
-            this.login.Visible = false;
-            // 
-            // checkMessages
-            // 
-            this.checkMessages.Interval = 15000;
-            this.checkMessages.Tick += new System.EventHandler(this.checkMessages_TickAsync);
-            // 
             // resetSetupToolStripMenuItem
             // 
             this.resetSetupToolStripMenuItem.Name = "resetSetupToolStripMenuItem";
@@ -95,6 +72,29 @@ namespace Talk
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(131, 6);
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.quitterToolStripMenuItem.Text = "Exit";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            // 
+            // login
+            // 
+            this.login.ActivateBrowserOnCreation = false;
+// TODO: Code generation for '' failed because of Exception 'Invalid Primitive Type: System.IntPtr. Consider using CodeObjectCreateExpression.'.
+            this.login.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.login.Location = new System.Drawing.Point(0, 0);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(1113, 636);
+            this.login.TabIndex = 2;
+            this.login.Visible = false;
+            // 
+            // checkMessages
+            // 
+            this.checkMessages.Interval = 15000;
+            this.checkMessages.Tick += new System.EventHandler(this.checkMessages_TickAsync);
             // 
             // Talk
             // 
