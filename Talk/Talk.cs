@@ -33,6 +33,9 @@ namespace Talk
 
         public Talk()
         {
+            CefSharp.WinForms.CefSettings settings = new CefSharp.WinForms.CefSettings();
+            settings.CachePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\CEF";
+            CefSharp.Cef.Initialize(settings);
             InitializeComponent();
         }
 
