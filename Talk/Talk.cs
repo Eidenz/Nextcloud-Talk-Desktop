@@ -35,6 +35,7 @@ namespace Talk
         {
             CefSharp.WinForms.CefSettings settings = new CefSharp.WinForms.CefSettings();
             settings.CachePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\CEF";
+            settings.CefCommandLineArgs.Add("enable-media-stream", "1");
             CefSharp.Cef.Initialize(settings);
             InitializeComponent();
         }
@@ -167,6 +168,7 @@ namespace Talk
                 String temp = address;
                 user = temp.Substring(temp.IndexOf("&user:") + 6);
                 user = user.Substring(0, user.IndexOf("&password:"));
+                user = user.Replace("%40", "@");
                 pass = temp.Substring(temp.IndexOf("&password:") + 10);
 
                 IResourceWriter writer = new ResourceWriter("myResources.resources");
