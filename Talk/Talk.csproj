@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyCustomDownloadHandler.cs" />
     <Compile Include="Talk.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -98,6 +98,7 @@ namespace Talk
                 getConversationsAsync();
                 checkMessages.Enabled = true;
                 login.Load(website + "/apps/spreed/");
+                login.DownloadHandler = new MyCustomDownloadHandler();
                 login.Visible = true;
             }
         }
@@ -247,10 +248,13 @@ namespace Talk
                     }
                 }
 
-                notifications.BalloonTipTitle = balloonTitle;
-                notifications.BalloonTipText = balloonText;
-                notifications.Icon = Properties.Resources.notif;
-                notifications.ShowBalloonTip(60000); //for old Windows versions. Lucky...
+                if (!this.Visible)
+                {
+                    notifications.BalloonTipTitle = balloonTitle;
+                    notifications.BalloonTipText = balloonText;
+                    notifications.Icon = Properties.Resources.notif;
+                    notifications.ShowBalloonTip(60000); //for old Windows versions. Lucky...
+                }
             }
         }
 
