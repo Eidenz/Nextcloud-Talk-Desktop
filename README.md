@@ -1,3 +1,5 @@
+# PROJECT DISCONTINUED
+------------------------------
 # Nextcloud Talk Desktop
 
 [__Download__](https://github.com/Eidenz/Nextcloud-Talk-Desktop/releases)
